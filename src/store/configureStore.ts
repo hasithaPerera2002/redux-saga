@@ -10,3 +10,7 @@ const store = configureStore(
         middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(saga),
     }
 )
+
+export default store;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
